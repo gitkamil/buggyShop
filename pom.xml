@@ -22,7 +22,7 @@
   <properties>
     <java.version>1.8</java.version>
   </properties>
-
+<dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -30,6 +30,17 @@
       <optional>true</optional>
     </dependency>
 
-  </dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>buggyShop-app</artifactId>
+      <version>${project.version}</version>
+    </dependency>
 
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>buggyShop-persistance</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
 </project>
